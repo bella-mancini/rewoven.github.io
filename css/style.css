@@ -1,0 +1,245 @@
+body{
+	background-color: #FFF8EB;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-row: auto;
+	column-gap: 16px;
+	row-gap: 24px;
+	margin-top: 40px;
+	margin-right: 24px;
+	margin-left: 24px;
+}
+
+header {
+	grid-column: 1/5;
+	grid-row: auto;
+	column-gap: 16px;
+	row-gap: 24px;
+	margin-top: 40px;
+	margin-right: 16px;
+	margin-left: 16px;
+}
+h2{
+	text-align: center;
+	padding: 8px;
+	background-image: url("/img/titles-2.png");
+	border-radius: 8px;
+	margin: 0;
+	color: #FFF8EB;
+	font-family: "swear-display", serif;
+	font-style: normal;
+	font-size: 40px;
+	grid-column: 1/5;
+}
+
+a {
+	font-family: Zain;
+	font-style:normal;
+}
+
+img {
+	width:100%;
+
+}
+
+
+p {
+	color: #394C62;
+	font-family: Zain;
+	font-style:normal;
+	font-size: 40px;
+}
+
+
+h3{
+	margin-top: 2px;
+	text-align: center;
+	color: #3E7CA1;
+}
+
+
+form{
+	
+	width: 45%;
+	display: inline-block;
+	margin: 20px;
+}
+
+footer{
+	margin-top: 3%;
+	text-align: center;
+}
+
+.hidden {
+	display:none;
+  }
+  .first-input:checked + .hidden {
+	display:block;
+  }
+
+  button {
+	background-color: #C1CC89;
+	border: none;
+		border-radius: 3px;
+		padding: 8px;
+
+  }
+
+ 
+  .nav-icon {
+	grid-column:4;
+	grid-row: 1;
+	font-size: 32px;
+    font-family: 'Material Symbols Outlined';
+    font-weight:bold;
+    font-style:normal;
+	color: #3E7CA1;
+
+	display: flex;
+	justify-self: end;
+	column-gap: 16px;
+	
+	
+  }
+
+  .home-icon {
+	grid-column:4;
+	grid-row: 1;
+	font-size: 32px;
+    font-family: 'Material Symbols Outlined';
+    font-weight:bold;
+	color: #3E7CA1;
+	display: flex;
+	justify-self: end;
+	column-gap: 16px;
+	
+  }
+
+  .home-icon, a {
+	text-decoration: none;
+  }
+
+  .menu-icon {
+cursor: pointer;
+  }
+
+  .content {
+    padding: 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #3E7CA1;
+	color: #FFF8EB;
+    grid-column: 1/5;
+    padding-bottom: 18px;
+    border-radius: 15px;
+  }
+  .content :hover {
+	font-size: 32px;
+	transform: scale(1.1);
+  }
+
+  .content a{
+    color: #FFF8EB;
+    border-radius: 16px;
+    margin-bottom: 16px;
+	font-size: 24px;
+    /*left: calc(10% + 50%);*/
+    justify-self: left;
+    transform: translateY(-10px); /* Slight shift for smooth animation */
+    transition: all .2s ease-in-out; /* Smooth transition */
+    
+  }
+
+  .hero-img {
+	grid-column: 1/5;
+	border-radius: 8px;
+  }
+
+  /* Unused */
+  .collapsible {
+    cursor: pointer;
+
+    font-family: 'Material Symbols Outlined';
+    font-weight: bold;
+    font-style: normal;
+    border-radius: 172px;
+	cursor: pointer;
+
+  }
+
+  /*Fonts*/
+  .swear-display {
+	/* light */
+	font-family: "swear-display", serif;
+	font-weight: 400;
+	font-style: normal;
+/* light italic */
+	font-family: "swear-display", serif;
+	font-weight: 400;
+	font-style: italic;
+/* Swear Display Bold */
+	font-family: "swear-display", serif;
+	font-weight: 700;
+	font-style: normal;
+/* Swear Display Bold Italic */
+	font-family: "swear-display", serif;
+	font-weight: 700;
+	font-style: italic;
+/* Swear Display Light Cilati */
+	font-family: "swear-display-cilati", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+/* Swear Display Bold Cilati */
+	font-family: "swear-display-cilati", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+  }
+  
+  .zain-extralight {
+	font-family: "Zain", serif;
+	font-weight: 200;
+	font-style: normal;
+  }
+  
+  .zain-light {
+	font-family: "Zain", serif;
+	font-weight: 300;
+	font-style: normal;
+  }
+  
+  .zain-regular {
+	font-family: "Zain", serif;
+	font-weight: 400;
+	font-style: normal;
+  }
+  
+  .zain-bold {
+	font-family: "Zain", serif;
+	font-weight: 700;
+	font-style: normal;
+  }
+  
+  .zain-extrabold {
+	font-family: "Zain", serif;
+	font-weight: 800;
+	font-style: normal;
+  }
+  
+  .zain-black {
+	font-family: "Zain", serif;
+	font-weight: 900;
+	font-style: normal;
+  }
+  
+  .zain-light-italic {
+	font-family: "Zain", serif;
+	font-weight: 300;
+	font-style: italic;
+  }
+  
+  .zain-regular-italic {
+	font-family: "Zain", serif;
+	font-weight: 400;
+	font-style: italic;
+  }
+  
