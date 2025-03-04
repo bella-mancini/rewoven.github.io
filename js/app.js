@@ -135,39 +135,4 @@ scanButton.addEventListener("click", async () => {
     }
   });
 
-  // nfc stuff 
-  if (! ('NDEFReader' in window))  {
-    //This device doesn't have NFC capabilities.
-    document.getElementById('scanButton').disabled = true;                
-    document.getElementById('stopScanButton').disabled = true;
-    document.getElementById('lastError').innerText = "Sorry, this app only works on devices capable of reading NFC"
- }
-
- reader = new NDEFReader();
- 
-reader.onreadingerror = (e) => {
-     var lastError = document.getElementById('lastError');
-     lastError.innerText = e.toString();
-}
- 
-reader.onreading = (e) => {
-
-function scanTag() {
-    reader.scan({signal: abortController.signal})
-    .then(()=>{})
-    .catch((e)=>{
-        if(!e) {
-             return;
-        }
-        if(e.isError) {
-            console.error(e);
-        } else {
-            if(e.reasonText) {
-            console.info(e.reasonText);
-          }
-        }
-    })
-    document.getElementById('scanButton').disabled = true;
-    document.getElementById('stopScanButton').disabled = false;
- }
-}
+  
