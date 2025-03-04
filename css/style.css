@@ -160,6 +160,14 @@ cursor: pointer;
 	border-radius: px;
   }
 
+  /* Grids*/
+  .margins {
+	grid-column: 1/4;
+	margin-left: 120px;
+	margin-right: 120px;
+	margin-top: 0px;
+	margin-bottom: 0;
+  }
   /* Unused */
   .collapsible {
     cursor: pointer;
