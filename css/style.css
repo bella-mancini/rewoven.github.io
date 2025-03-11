@@ -85,10 +85,17 @@ footer{
 	margin-top: 32px;
 	background-color: #3E7CA1;
 	color: #FFF8EB;
-	width: calc(100% + 0px);
-	margin-left: -16px;
+	width: calc(100% + 8px);
 	padding:16px;
+	margin-left: -16px;
+	
 }
+
+.small-screen {
+	/*position: absolute;
+    bottom: 0;*/
+}
+
 
 footer a {
 	color: #FFF8EB;
@@ -287,6 +294,7 @@ cursor: pointer;
     width: 70%;
     
   }
+
   /* Next & previous buttons */
   .prev, .next {
     cursor: pointer;
@@ -327,6 +335,9 @@ cursor: pointer;
 	
   }
 
+ .left {
+	text-align: left;
+ } 
   /*Meet the team*/
 .our-pictures {
 	border-radius: 5px;
