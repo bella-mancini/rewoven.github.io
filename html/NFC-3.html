@@ -34,7 +34,7 @@
  <p class="two-column">When you decided to use rewoven's services instead of buying a 
     new pair of jeans you reused...
  </p>
-<p class="two-column bigtext">5</p>
+<p class="two-column bigtext" id="reused-display">5</p>
 <p class="two-column">items of clothing from going into the landfill</p>
  <a href="NFC-4.html" class="two-column button">Next</a>
  
@@ -49,7 +49,23 @@
             <a href="../html/customert.html" class="col-2">Customer testimonials</a>
             
 </footer>
-<script src="../app.js"></script>  
+<!--<script src="../app.js"></script> -->
+<script>
+    window.onload = function () {
+        // Retrieve the "Reused" data from localStorage
+        let reused = localStorage.getItem("Reused");
+
+        console.log("Retrieved Reused data:", reused); // Debugging log
+
+        // Display the retrieved name
+        if (reused) {
+            document.getElementById("reused-display").innerText = reused;
+        } 
+        else {
+            document.getElementById("reused-display").innerText = "No name found.";
+        }
+    };
+</script>
 
 
 </body>

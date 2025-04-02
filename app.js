@@ -99,6 +99,24 @@ function showSlides(n, no) {
   }
 }
 
+// checkbox pretty
+const checkboxes = document.querySelectorAll(".checkbox");
+checkboxes.forEach(checkbox => {
+  const input = checkbox.children[0];
+  const overlay = checkbox.children[1];
+  const icon = overlay.children[0];
+});
+
+input.addEventListener("change", () => {
+  if (input.checked) {
+      overlay.classList.add("checked");
+      icon.classList.add("checked");
+  } else {
+      overlay.classList.remove("checked");
+      icon.classList.remove("checked");
+  }
+});
+
 // for match text
 
 async function matchText() {

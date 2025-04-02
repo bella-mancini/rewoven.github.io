@@ -34,13 +34,13 @@
  <p class="two-column">When you decided to use rewoven's services instead of buying a 
     new pair of jeans you saved...
  </p>
- <p class="two-column">1372 gallons of water</p>
+ <p class="two-column"><span id="waterGal-display">number</span> gallons of water</p>
  <button class="collapsible">What's this compared to?
- <p class="p-content two-column">It's like turning your sink on and letting it run for 10 hours.</p></button>
+ <p class="p-content two-column">It's like turning your sink on and letting it run for <p id="Water-sink-display">number</p> hours.</p></button>
 
- <p class="two-column">34.32 kg of CO2</p>
+ <p class="two-column"><p id="CO2-kg-display">number</p> kg of CO2</p>
  <button class="collapsible">What's this compared to?
-    <p class="p-content two-column">It's like driving 100 miles in the average gas car.</p></button>
+    <p class="p-content two-column">It's like driving <p id="CO2-drive-display">number</p> miles in the average gas car.</p></button>
 
  <a href="NFC-3.html" class="two-column button ">Next</a>
    
@@ -55,7 +55,36 @@
             <a href="../html/customert.html" class="col-2">Customer testimonials</a>
             
 </footer>
-<script src="../app.js"></script>  
+<!--<script src="../app.js"></script> -->
+<script>
+    window.onload = function () {
+        // Retrieve updated fields from localStorage
+        let storedName = localStorage.getItem("searchedName");
+        let waterGal = localStorage.getItem("waterGal");
+        let waterSink = localStorage.getItem("waterSink");
+        let co2Kg = localStorage.getItem("co2Kg");
+        let co2Drive = localStorage.getItem("co2Drive");
+        let reused = localStorage.getItem("Reused");
+
+        console.log("Retrieved data:", {
+            storedName, waterGal, waterSink, co2Kg, co2Drive, reused
+        });
+
+        // Display the retrieved name
+        if (storedName) {
+            document.getElementById("name-display").innerText = "Welcome, " + storedName + "!";
+        } else {
+            document.getElementById("name-display").innerText = "No name found.";
+        }
+
+        // Display the other retrieved data
+        document.getElementById("waterGal-display").innerText = waterGal || "Not available";
+        document.getElementById("waterSink-display").innerText = waterSink || "Not available";
+        document.getElementById("co2Kg-display").innerText = co2Kg || "Not available";
+        document.getElementById("co2Drive-display").innerText = co2Drive || "Not available";
+        document.getElementById("Reused-display").innerText = reused || "Not available";
+    };
+</script>
 
 
 </body>

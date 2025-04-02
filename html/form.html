@@ -29,45 +29,73 @@
 <h2>Commission Form</h2>
 </header>
 
-<div class="grid">
-	<form id="my-form" method="POST" 
+	<form class="grid two-column left" id="my-form" method="POST" 
 	action="https://script.google.com/macros/s/AKfycbwNPHFaXw0cpHXC9Rus6y7UJvI8pyWIHjYa9vOW_1c3CRI7LhfvNgE4oHXb-iCWIqng/exec">
-	<input name="Requests" type="text" placeholder="Requests" rows="10" cols="30" required>
-	<input name="Name" type="text" placeholder="Name" required>
 	
-	<label name="Shape" type="checkbox" placeholder="Shape" required for="shape-1-a">Shape</label>
-<input class="first-input" id="shape-1-a" type="checkbox">
-<label class="hidden">Choose desired shape:
+	<label for="pet-select">First name</label>
+	<input name="Name" type="text" placeholder="Name" required><br><br>
+	
+	<label for="Changes">What don't you love about your pants?</label><br>
+	<label class="checkbox-label">
+	<input type="checkbox" id="coding" name="interest" value="coding" />
+	  
+		<span class="overlay">
+			<svg class="icon"></svg>
+		</span>
+		<p>shape change</p>
+	</label>
+	   <br>
+
+	<!--<div class="checkbox-label">
+		<input type="checkbox" id="coding" name="interest" value="coding" />
+		<label for="coding">Coding</label>
+	  </div>
+	  <div>
+		<input type="checkbox" id="music" name="interest" value="music" />
+		<label for="music">Music</label>
+	  </div>
+	<label for="pet-select">What are Jessica's niches that you are interested in for your jean's personalization? (can select multiple)</label>
+	<label for="pet-select">What is your perferred style?<p>(can select multiple)</p></label>
+	-->
+	<label for="Requests">Personal Requests</label>
+	<textarea name="Requests" type="text" placeholder="Your text here" rows="10" cols="30" required></textarea><br><br>
+	
+<!--
+	<label name="Shape" type="checkbox" placeholder="Shape" required for="shape-1-a">Shape</label><br>
+	<input class="first-input" id="shape-1-a" type="checkbox">
+	<label class="hidden">Choose desired shape:
 	<label for="pet-select">Choose a pet:</label>
 
-<select name="pets" id="pet-select">
-  <option value="">choose one</option>
-  <option value="dog">Dog</option>
-  <option value="cat">Cat</option>
-  <option value="hamster">Hamster</option>
-  <option value="parrot">Parrot</option>
-  <option value="spider">Spider</option>
-  <option value="goldfish">Goldfish</option>
-</select>
+	<select name="pets" id="pet-select">
+	<option value="">choose one</option>
+	<option value="dog">Dog</option>
+	<option value="cat">Cat</option>
+	<option value="hamster">Hamster</option>
+	<option value="parrot">Parrot</option>
+	<option value="spider">Spider</option>
+	<option value="goldfish">Goldfish</option>
+	</select>
 
-</label>
-<label class="hidden">
+	</label>
+	<label class="hidden">
 	
 	Choose desired shape:</label>
 
 
 
-<label for="shape-2-a">input 2</label>
-<input class="first-input" id="input-2-a" type="checkbox">
+	<label for="shape-2-a">input 2</label>
+	<input class="first-input" id="input-2-a" type="checkbox">
 
-<label class="hidden"><input id="input-2-b" type="checkbox">hidden-2</label>
+	<label class="hidden"><input id="input-2-b" type="checkbox">hidden-2</label><br>
 
 
+-->	
+	
 
-	<button type="submit">Send</button>
+<a class="button" href="form-2.html">Checkout</a>
 
-	</form>
-	</div>
+</form>
+	
           
         
      
