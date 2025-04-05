@@ -26,13 +26,13 @@
             <a href="../html/process.html">Our process</a><br>
             <a href="../html/customert.html">Customer testimonials</a><br>
             </div>     
-<h2>Order form</h2>
+			<h2>Order form</h2>
 </header>
 
 	<form class="grid two-column left" id="my-form" method="POST" 
 	action="https://script.google.com/macros/s/AKfycbwA4FR5O7f_e72V5-3WGcuTK_BR3OtNoG4y5ih3C126ruhHhWmhHIahrZKXOWBa_VCB/exec">
 	
-	<h3 class="two-column">Order information</h3>
+	
 	<label for="Name" class=" col-1 zain-extrabold">First name</label>
 	<input name="Name" type="text" placeholder="Name" class="two-column left" required><br>
 
@@ -97,7 +97,8 @@
         <label class="two-column">Options:</label>
 
         <label class="col-1 left checkbox-label"><img src="../img/sashiko.png"><input type="checkbox">Sashiko</label>
-        <label class="col-2 left checkbox-label"><img src="../img/invisible-m.webp"><input type="checkbox">invisible</label>
+        <label class="col-2 left checkbox-label"><img src="../img/patchwork.png"><input type="checkbox">invisible</label>
+		<label class="col-1 left checkbox-label"><img src="../img/invisible-m.webp"><input type="checkbox">patchwork</label>
     </div>
 </div><br>
 
@@ -122,6 +123,9 @@
 
 </div><br>
 
+<label for="inspo" class="two-column left zain-extrabold check-grid">upload inspo picture</label>
+<input type="file" id="inspo" name="inspo" accept="image/png, image/jpeg"/>
+	
 
 <label for="Requests" class="two-column left zain-extrabold">Personal Requests</label>
 	<textarea name="Requests" type="text" class="two-column left" placeholder="Your text here" rows="10" cols="30" required></textarea><br><br>
