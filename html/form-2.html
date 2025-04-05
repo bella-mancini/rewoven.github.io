@@ -26,12 +26,114 @@
             <a href="../html/process.html">Our process</a><br>
             <a href="../html/customert.html">Customer testimonials</a><br>
             </div>     
-<h2>Payment Info</h2>
+<h2>Order form</h2>
 </header>
 
 	<form class="grid two-column left" id="my-form" method="POST" 
 	action="https://script.google.com/macros/s/AKfycbwA4FR5O7f_e72V5-3WGcuTK_BR3OtNoG4y5ih3C126ruhHhWmhHIahrZKXOWBa_VCB/exec">
 	
+	<h3 class="two-column">Order information</h3>
+	<label for="Name" class=" col-1 zain-extrabold">First name</label>
+	<input name="Name" type="text" placeholder="Name" class="two-column left" required><br>
+
+	<label for="Email" class=" col-1 zain-extrabold">Email</label>
+	<input name="Email" type="text" placeholder="Email" class="two-column left" required><br>
+
+<label for="size-1-a" class="two-column left zain-extrabold">Size change</label>
+
+<div class="checkbox two-column left">
+    <input id="No-size-2" type="checkbox" name="check" value="No" class="col-1">
+    <label class="checkbox-label" for="No-size-2">No</label>
+    
+
+    <input id="sizeCheck" type="checkbox" onclick="hiddenCheck('size-box')">
+    <label class="checkbox-label" for="sizeCheck">Yes</label>
+
+    <div class="two-column hidden-box" id="size-box" style="display: none;">
+        <label class="two-column">Waist measurement</label>
+
+        <label class="col-1 left checkbox-label">initial <input name="initial" type="text" placeholder="inches" class="col-1 left" ></label>
+
+		<label class="col-2 left checkbox-label">desired <input name="desired" type="text" placeholder="inches" class="col-2 left"></label>
+	</div>
+</div><br>
+	
+	<!-- Shape Change Section -->
+<label for="shape-1-a" class="two-column left zain-extrabold">Shape change</label>
+
+<div class="checkbox two-column left">
+    <input id="No-shape-1" type="checkbox" name="check" value="No" class="col-1">
+    <label class="checkbox-label" for="No-shape-1">No</label>
+    
+
+    <input id="shapeCheck" type="checkbox" onclick="hiddenCheck('shape-box')">
+    <label class="checkbox-label" for="shapeCheck">Yes</label>
+
+    <div class="two-column hidden-box" id="shape-box" style="display: none;">
+        <label class="two-column">Shape:</label>
+
+        <label class="col-1 left checkbox-label"><img src="../img/shape-01.png"><input type="checkbox">Straight</label>
+        <label class="col-2 left checkbox-label"><img src="../img/shape-05.png"><input type="checkbox">Skinny</label>
+        <label class="col-1 left checkbox-label"><img src="../img/shape-06.png"><input type="checkbox">Wide leg</label>
+        <label class="col-2 left checkbox-label"><img src="../img/shape-02.png"><input type="checkbox">Boyfriend</label>
+        <label class="col-1 left checkbox-label"><img src="../img/shape-01.png"><input type="checkbox">Regular</label>
+        <label class="col-2 left checkbox-label"><img src="../img/shape-01.png"><input type="checkbox">Flared</label>
+    </div>
+</div>
+<br>
+
+<!-- Mending Section -->
+<label for="mending-1-a" class="two-column left zain-extrabold" > Hole mending</label>
+
+<div class="checkbox two-column left">
+    <input id="No-mending-2" type="checkbox" name="check" value="No" class="col-1">
+    <label class="checkbox-label" for="No-mending-2">No</label>
+    
+
+    <input id="mendingCheck" type="checkbox" onclick="hiddenCheck('mending-box')">
+    <label class="checkbox-label" for="mendingCheck">Yes</label>
+
+    <div class="two-column hidden-box" id="mending-box" style="display: none;">
+        <label class="two-column">Options:</label>
+
+        <label class="col-1 left checkbox-label"><img src="../img/sashiko.png"><input type="checkbox">Sashiko</label>
+        <label class="col-2 left checkbox-label"><img src="../img/invisible-m.webp"><input type="checkbox">invisible</label>
+    </div>
+</div><br>
+
+<label for="shape-1-a" class="two-column left zain-extrabold">Color palette</label>
+
+<div class="checkbox two-column left check-grid">
+    <label class="col-1 left checkbox-label"><img src="../img/denim-c.png"><input type="checkbox">Denim only</label>
+	<label class="col-2 left checkbox-label"><img src="../img/vibrant-c.png"><input type="checkbox">Vibrant</label>
+	<label class="col-1 left checkbox-label"><img src="../img/pastel-c.png"><input type="checkbox">Pastel</label>
+	<label class="col-2 left checkbox-label"><img src="../img/mono-c.png"><input onclick="hiddenCheck('mending-box')" id="monoCheck" type="checkbox">Greyscale</label>
+
+</div><br>
+
+<label for="shape-1-a" class="two-column left zain-extrabold">Personal style</label>
+<div class="checkbox two-column left">
+    <input id="masc" type="checkbox" name="check" value="masc" class="col-1">
+    <label class="checkbox-label" for="masc">masculine</label><br>
+	<input id="andr" type="checkbox" name="check" value="andr" class="col-1">
+    <label class="checkbox-label"  for="andr">androgynous</label><br>
+	<input id="fem" type="checkbox" name="check" value="fem" class="col-1">
+    <label class="checkbox-label" for="fem">feminine</label><br>
+
+</div><br>
+
+
+<label for="Requests" class="two-column left zain-extrabold">Personal Requests</label>
+	<textarea name="Requests" type="text" class="two-column left" placeholder="Your text here" rows="10" cols="30" required></textarea><br><br>
+	
+	
+
+<!-- payment info -->
+<img class="hero-img" src="../img/websiteBorders-04.png">
+
+
+	<h3 class="two-column">Payment information</h3>
+	 
 	<label for="Card-number" class="col-1">Card number</label>
 	<input name="Card-number" type="text" placeholder="XXXX XXXX XXXX XXXX" class="col-1" required><br>
 	
@@ -66,7 +168,7 @@
 </footer>
         
     
-<!--<script src="../app.js"></script>-->
+<script src="../app.js"></script>
 <script>
 	document.getElementById("my-form").addEventListener("submit", function(event) {
 		event.preventDefault(); // Prevent default form submission

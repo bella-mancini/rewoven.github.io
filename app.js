@@ -1,39 +1,5 @@
-// web url https://script.google.com/macros/s/AKfycbwNPHFaXw0cpHXC9Rus6y7UJvI8pyWIHjYa9vOW_1c3CRI7LhfvNgE4oHXb-iCWIqng/exec
-// deploy id AKfycbwNPHFaXw0cpHXC9Rus6y7UJvI8pyWIHjYa9vOW_1c3CRI7LhfvNgE4oHXb-iCWIqng
 
-/*document.getElementById('my-form').addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevent default form submission
-    const form = e.target;
-
-    // Send the form data using Fetch API
-    fetch(form.action, {
-        method: form.method,
-        body: new FormData(form),
-    })
-    .then(response => {
-        if (response.ok) {
-            // Redirect to success.html
-            window.location.href = "success.html";
-        } else {
-            alert("There was an error submitting the form.");
-        }
-    })
-    .catch(error => {
-        console.error("Error:", error);
-        alert("Failed to submit the form.");
-    });
-});*/
-
-/* Visibilty Nav bar */
-
-/*document.querySelector('.menu-icon').addEventListener('click', function () {
-    const contentNav = document.querySelector('.content-nav');
-    contentNav.classList.toggle('show');
-  });*/
-
-
-
-
+// menu
 var coll = document.getElementsByClassName("menu-icon");
 var i;
 
@@ -49,6 +15,7 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
+//collapsible
 document.querySelectorAll(".collapsible").forEach(button => {
   button.addEventListener("click", function() {
     this.classList.toggle("active");
@@ -72,14 +39,14 @@ showSlides(1, 4);
 showSlides(1, 5);
 
 function plusSlides(n, no) {
-  console.log(`Button clicked: Change slide in set ${no} by ${n}`);
+  
   showSlides(slideIndex[no] += n, no);
 }
 
 function showSlides(n, no) {
   let i;
   let x = document.getElementsByClassName(slideId[no]);
-  console.log(`Showing slides for set ${no} (class: ${slideId[no]}), slide number ${n}. Total slides: ${x.length}`);
+  
   
   if (n > x.length) {
     slideIndex[no] = 1;
@@ -95,54 +62,22 @@ function showSlides(n, no) {
   if (x[slideIndex[no] - 1]) {
     x[slideIndex[no] - 1].style.display = "block";
   } else {
-    console.log(`Error: Slide ${slideIndex[no] - 1} does not exist for set ${no}`);
+    
   }
 }
 
-// checkbox pretty
-const checkboxes = document.querySelectorAll(".checkbox");
-checkboxes.forEach(checkbox => {
-  const input = checkbox.children[0];
-  const overlay = checkbox.children[1];
-  const icon = overlay.children[0];
-});
+// hidden check
+function hiddenCheck(hiddenBoxId) {
+  var checkBox = document.getElementById(hiddenBoxId.replace('-box', 'Check'));
+  var hiddenBox = document.getElementById(hiddenBoxId);
 
-input.addEventListener("change", () => {
-  if (input.checked) {
-      overlay.classList.add("checked");
-      icon.classList.add("checked");
+  if (checkBox.checked) {
+      hiddenBox.style.display = "grid";
+      console.log(hiddenBoxId + " is visible");
   } else {
-      overlay.classList.remove("checked");
-      icon.classList.remove("checked");
-  }
-});
-
-// for match text
-
-async function matchText() {
-  const query = document.getElementById("searchId").value;
-  if (!query) {
-      alert("Please enter an ID number");
-      return;
-  }
-
-  try {
-      const res = await fetch("/match", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ query: query }),
-      });
-
-      if (!res.ok) {
-          throw new Error(`Server Error: ${res.status}`);
-      }
-
-      const data = await res.json();
-      document.getElementById("result").innerText = data.match
-          ? `✅ Found: ${data.data}`
-          : "❌ Not Found";
-  } catch (error) {
-      console.error("❌ Fetch Error:", error);
-      document.getElementById("result").innerText = "❌ Error Fetching Data";
+      hiddenBox.style.display = "none";
+      console.log(hiddenBoxId + " is hidden");
   }
 }
+
+

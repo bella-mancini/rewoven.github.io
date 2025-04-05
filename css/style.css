@@ -24,13 +24,15 @@ h2{
 	text-align: center;
 	padding: 8px;
 	background-image: url("/img/titles-2.png");
-	border-radius: 8px;
 	margin: 0;
 	color: #FFF8EB;
 	font-family: "swear-display", serif;
 	font-style: normal;
 	font-size: 40px;
 	grid-column: 1/3;
+
+	margin-left: -16px;
+	width: calc(100% + 32px);
 }
 
 h3{
@@ -120,12 +122,7 @@ column-gap: 16px;
 	grid-column: 2/3;
 }
 
-.hidden {
-	display:none;
-  }
-  .first-input:checked + .hidden {
-	display:block;
-  }
+
 
   .button {
 	background-color: #C1CC89;
@@ -347,7 +344,7 @@ cursor: pointer;
 /*form*/
 
 form {
-	display: grid;
+	display: inline-grid;
 	grid-template-columns: 1fr 1fr;
 
 	column-gap: 8px;
@@ -376,15 +373,13 @@ input[type=checkbox] {
 		3px 
 		solid #3E7CA1;
 	border-radius: 5px;
-	padding: 8px;
-	opacity: 0;
+	padding: 4px;
+	opacity: 100;
+	accent-color: #3E7CA1;
 	}
 
 .checkbox-label {
-	border: 
-		3px 
-		solid #3E7CA1;
-		border-radius: 5px;
+	color: #3E7CA1;
 	padding: 4px;
 }
 
@@ -395,6 +390,14 @@ textarea[type=text] {
 	border-radius: 5px;
 	width: calc(100% - 24px);
 	padding: 8px;
+	}
+
+input::file-selector-button {
+	font-weight: bold;
+	color: dodgerblue;
+	padding: 0.5em;
+	border: thin solid grey;
+	border-radius: 3px;
 	}
 
 .form-button {
@@ -410,8 +413,24 @@ textarea[type=text] {
 }
 
 
+.hidden-box {
+	display: none; 
+	column-gap: 16px;
+	align-items: end;
+}
 
+.hidden-box img {
+	border-radius: 5px;
+}
 
+.check-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: end;
+}
+.check-grid img {
+	border-radius: 5px;
+}
 
 
   /*Fonts*/
