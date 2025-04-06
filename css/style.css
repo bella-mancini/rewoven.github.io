@@ -913,6 +913,16 @@ cursor: pointer;
 .youtube {
 	width: 100%;
 	aspect-ratio: 16/9;
+	color: #FFF8EB;
+	align-items: center;
+	justify-items: end;
+}
+
+.youtube img {
+	width: 40px;
+	height: 40px;
+	align-self:self-end;
+	justify-self: center;
 }
 
 .secondary {
@@ -1033,8 +1043,15 @@ input[type=checkbox] {
 	opacity: 100;
 	accent-color: #3E7CA1;
 	}
+input[type=radio] {
+	
+	border-radius: 5px;
+	padding: 4px;
+	opacity: 100;
+	accent-color: #3E7CA1;
+	}
 
-.checkbox-label {
+.radio-label {
 	color: #3E7CA1;
 	padding: 4px;
 }
@@ -1094,6 +1111,11 @@ input::file-selector-button {
 	border-radius: 5px;
 }
 
+.item-selection {
+	border: 5px solid #3E7CA1;
+		border-radius: 5px;
+		padding: 8px;
+}
 
   /*Fonts*/
   .swear-display {

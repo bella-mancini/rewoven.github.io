@@ -32,6 +32,11 @@
 <form class="grid two-column left" id="my-form" method="POST" 
 action="https://script.google.com/macros/s/AKfycbwA4FR5O7f_e72V5-3WGcuTK_BR3OtNoG4y5ih3C126ruhHhWmhHIahrZKXOWBa_VCB/exec">
 
+<div class="two-column item-selection">
+	<p class="">pants</p>
+	<p>$100.00 USD</p>
+</div><br>
+<p class="two-column zain-light">(more options coming soom)</p>
 <label for="Name" class="col-1 zain-extrabold">First name</label>
 <input name="Name" type="text" placeholder="Name" class="two-column left" required><br>
 
@@ -39,76 +44,87 @@ action="https://script.google.com/macros/s/AKfycbwA4FR5O7f_e72V5-3WGcuTK_BR3OtNo
 <input name="Email" type="text" placeholder="Email" class="two-column left" required><br>
 
 <!-- Size Change Section -->
-<label for="size-1-a" class="two-column left zain-extrabold">Size change</label>
-<div class="checkbox two-column left">
-	<input id="No-size" type="checkbox" name="Size Change" value="No" class="col-1">
-	<label class="checkbox-label" for="No-size">No</label>
+<label class="two-column left zain-extrabold">Size change <span class="zain-light">(+$30.00)</span></label>
+<div class="radio-group two-column left">
+    <input id="No-size" type="radio" name="Size Change" value="No">
+    <label class="radio-label" for="size-no">No</label>
 
-	<input id="sizeCheck" type="checkbox" name="Size Change" value="Yes" onclick="hiddenCheck('size-box')">
-	<label class="checkbox-label" for="sizeCheck">Yes</label>
+    <input id="sizeCheck" type="radio" name="Size Change" value="Yes">
+    <label class="radio-label" for="sizeCheck">Yes</label>
 
-	<div class="two-column hidden-box" id="size-box" style="display: none;">
-		<label class="two-column">Waist measurement</label>
-		<label class="col-1 left checkbox-label">Initial <input name="Initial Waist Measurement" type="text" placeholder="inches" class="col-1 left"></label>
-		<label class="col-2 left checkbox-label">Desired <input name="Desired Waist Measurement" type="text" placeholder="inches" class="col-2 left"></label>
-	</div>
-</div><br>
+    <div class="two-column hidden-box" id="size-box">
+        <label class="two-column">Waist measurement</label>
+        <label class="col-1 left radio-label">Initial <input name="Initial Waist Measurement" type="text" placeholder="inches"></label>
+        <label class="col-2 left radio-label">Desired <input name="Desired Waist Measurement" type="text" placeholder="inches"></label>
+    </div>
+</div>
+
+<br>
 
 <!-- Shape Change Section -->
-<label for="shape-1-a" class="two-column left zain-extrabold">Shape change</label>
-<div class="checkbox two-column left">
-	<input id="No-shape" type="checkbox" name="Shape Change" value="No" class="col-1">
-	<label class="checkbox-label" for="No-shape">No</label>
+<label for="shape-1-a" class="two-column left zain-extrabold">Shape change <span class="zain-light">(+$30.00)</span></label>
+<div class="radio-group two-column left">
+	<input id="No-shape" type="radio" name="Shape Change" value="No" class="col-1">
+	<label class="radio-label" for="No-shape">No</label>
 
-	<input id="shapeCheck" type="checkbox" name="Shape Change" value="Yes" onclick="hiddenCheck('shape-box')">
-	<label class="checkbox-label" for="shapeCheck">Yes</label>
+	<input id="shapeCheck" type="radio" name="Shape Change" value="Yes">
+	<label class="radio-label" for="shapeCheck">Yes</label>
 
 	<div class="two-column hidden-box" id="shape-box" style="display: none;">
 		<label class="two-column">Shape:</label>
-		<label class="col-1 left checkbox-label"><img src="../img/shape-01.png"><input type="checkbox" name="Shape Selection" value="Straight">Straight</label>
-		<label class="col-2 left checkbox-label"><img src="../img/shape-05.png"><input type="checkbox" name="Shape Selection" value="Skinny">Skinny</label>
-		<label class="col-1 left checkbox-label"><img src="../img/shape-06.png"><input type="checkbox" name="Shape Selection" value="Wide Leg">Wide leg</label>
-		<label class="col-2 left checkbox-label"><img src="../img/shape-02.png"><input type="checkbox" name="Shape Selection" value="Boyfriend">Boyfriend</label>
-		<label class="col-1 left checkbox-label"><img src="../img/shape-01.png"><input type="checkbox" name="Shape Selection" value="Regular">Regular</label>
-		<label class="col-2 left checkbox-label"><img src="../img/shape-01.png"><input type="checkbox" name="Shape Selection" value="Flared">Flared</label>
+		<label class="col-1 left radio-label"><img src="../img/shape-04.png"><input type="checkbox" name="Shape Selection" value="Straight">Straight</label>
+		<label class="col-2 left radio-label"><img src="../img/shape-05.png"><input type="checkbox" name="Shape Selection" value="Skinny">Skinny</label>
+		<label class="col-1 left radio-label"><img src="../img/shape-06.png"><input type="checkbox" name="Shape Selection" value="Wide Leg">Wide leg</label>
+		<label class="col-2 left radio-label"><img src="../img/shape-02.png"><input type="checkbox" name="Shape Selection" value="Boyfriend">Boyfriend</label>
+		<label class="col-1 left radio-label"><img src="../img/shape-03.png"><input type="checkbox" name="Shape Selection" value="Regular">Regular</label>
+		<label class="col-2 left radio-label"><img src="../img/shape-01.png"><input type="checkbox" name="Shape Selection" value="Flared">Flared</label>
 	</div>
 </div><br>
 
 <!-- Mending Section -->
-<label for="mending-1-a" class="two-column left zain-extrabold">Hole mending</label>
-<div class="checkbox two-column left">
-	<input id="No-mending" type="checkbox" name="Hole Mending" value="No" class="col-1">
-	<label class="checkbox-label" for="No-mending">No</label>
+<label for="mending-1-a" class="two-column left zain-extrabold">Hole mending <span class="zain-light">(+$10.00)</span></label>
+<div class="radio-group two-column left">
+	<input id="No-mending" type="radio" name="Hole Mending" value="No" class="col-1">
+	<label class="radio-label" for="No-mending">No</label>
 
-	<input id="mendingCheck" type="checkbox" name="Hole Mending" value="Yes" onclick="hiddenCheck('mending-box')">
-	<label class="checkbox-label" for="mendingCheck">Yes</label>
+	<input id="mendingCheck" type="radio" name="Hole Mending" value="Yes">
+	<label class="radio-label" for="mendingCheck">Yes</label>
 
-	<div class="two-column hidden-box" id="mending-box" style="display: none;">
+	<div class="two-column hidden-box" id="mending-box">
 		<label class="two-column">Options:</label>
-		<label class="col-1 left checkbox-label"><img src="../img/sashiko.png"><input type="checkbox" name="Mending Option" value="Sashiko">Sashiko</label>
-		<label class="col-2 left checkbox-label"><img src="../img/patchwork.png"><input type="checkbox" name="Mending Option" value="Invisible">Invisible</label>
-		<label class="col-1 left checkbox-label"><img src="../img/invisible-m.webp"><input type="checkbox" name="Mending Option" value="Patchwork">Patchwork</label>
+		<label class="col-1 left radio-label"><img src="../img/sashiko.png"><input type="checkbox" name="Mending Option" value="Sashiko">Sashiko</label>
+		<label class="col-2 left radio-label"><img src="../img/patchwork.png"><input type="checkbox" name="Mending Option" value="Patchwork">Patchwork</label>
+		<label class="col-1 left radio-label"><img src="../img/invisible-m.webp"><input type="checkbox" name="Mending Option" value="Invisible">Invisible</label>
 	</div>
 </div><br>
+
 
 <!-- Color Palette -->
 <label class="two-column left zain-extrabold">Color palette</label>
 <div class="checkbox two-column left check-grid">
-	<label class="col-1 left checkbox-label"><img src="../img/denim-c.png"><input type="checkbox" name="Color Palette" value="Denim Only">Denim only</label>
-	<label class="col-2 left checkbox-label"><img src="../img/vibrant-c.png"><input type="checkbox" name="Color Palette" value="Vibrant">Vibrant</label>
-	<label class="col-1 left checkbox-label"><img src="../img/pastel-c.png"><input type="checkbox" name="Color Palette" value="Pastel">Pastel</label>
-	<label class="col-2 left checkbox-label"><img src="../img/mono-c.png"><input type="checkbox" name="Color Palette" value="Greyscale">Greyscale</label>
+	<label class="col-1 left radio-label"><img src="../img/denim-c.png"><input type="radio" name="Color Palette" value="Denim Only">Denim only</label>
+	<label class="col-2 left radio-label"><img src="../img/vibrant-c.png"><input type="radio" name="Color Palette" value="Vibrant">Vibrant</label>
+	<label class="col-1 left radio-label"><img src="../img/pastel-c.png"><input type="radio" name="Color Palette" value="Pastel">Pastel</label>
+	<label class="col-2 left radio-label"><img src="../img/mono-c.png"><input type="radio" name="Color Palette" value="Greyscale">Greyscale</label>
 </div><br>
 
 <!-- Personal Style -->
 <label class="two-column left zain-extrabold">Personal style</label>
 <div class="checkbox two-column left">
-	<input id="masc" type="checkbox" name="Personal Style" value="Masc" class="col-1">
-	<label class="checkbox-label" for="masc">Masculine</label><br>
-	<input id="andr" type="checkbox" name="Personal Style" value="Androgynous" class="col-1">
-	<label class="checkbox-label" for="andr">Androgynous</label><br>
-	<input id="fem" type="checkbox" name="Personal Style" value="Feminine" class="col-1">
-	<label class="checkbox-label" for="fem">Feminine</label><br>
+	<input id="masc" type="radio" name="Personal Style" value="Masc" class="col-1">
+	<label class="radio-label" for="masc">Masculine</label><br>
+	<input id="andr" type="radio" name="Personal Style" value="Androgynous" class="col-1">
+	<label class="radio-label" for="andr">Androgynous</label><br>
+	<input id="fem" type="radio" name="Personal Style" value="Feminine" class="col-1">
+	<label class="radio-label" for="fem">Feminine</label><br>
+</div><br>
+
+<label class="two-column left zain-extrabold">Including all your own fabric <span class="zain-light">(-$5.00)</span></label>
+<div class="checkbox two-column left">
+	<input id="no-fab" type="radio" name="Own fabric" value="No" class="col-1">
+	<label class="radio-label" for="no-fab">No</label><br>
+	<input id="ownFab" type="radio" name="Own fabric" value="Yes" class="col-1">
+	<label class="radio-label" for="ownFab">Yes</label><br>
 </div><br>
 
 <!-- Upload Image -->
@@ -118,6 +134,8 @@ action="https://script.google.com/macros/s/AKfycbwA4FR5O7f_e72V5-3WGcuTK_BR3OtNo
 <!-- Personal Requests -->
 <label for="Requests" class="two-column left zain-extrabold">Personal Requests</label>
 <textarea name="Personal Requests" type="text" class="two-column left" placeholder="Your text here" rows="10" cols="30" required></textarea><br><br>
+
+<img class="hero-img" src="../img/websiteBorders-03.png">
 
 <!-- Payment Info -->
 <h3 class="two-column">Payment information</h3>
@@ -134,6 +152,7 @@ action="https://script.google.com/macros/s/AKfycbwA4FR5O7f_e72V5-3WGcuTK_BR3OtNo
 <label for="cardholder-name" class="col-1">Cardholder name</label>
 <input name="Cardholder Name" type="text" placeholder="Name" class="two-column left" required><br>
 
+<br><p class="two-column">final price: $<span class="zain-extrabold" id="total-price">100</span></p><br>
 <button class="button two-column" type="submit">Submit</button>
 </form>
 

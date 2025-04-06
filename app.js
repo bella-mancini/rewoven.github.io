@@ -216,19 +216,84 @@ function showSlides(n, no) {
   }
 }
 
-// hidden check
-function hiddenCheck(hiddenBoxId) {
-  var checkBox = document.getElementById(hiddenBoxId.replace('-box', 'Check'));
-  var hiddenBox = document.getElementById(hiddenBoxId);
 
-  if (checkBox.checked) {
-      hiddenBox.style.display = "grid";
-      console.log(hiddenBoxId + " is visible");
-  } else {
-      hiddenBox.style.display = "none";
-      console.log(hiddenBoxId + " is hidden");
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Define the sections to toggle
+  const sections = [
+      { yesId: "sizeCheck", noId: "No-size", boxId: "size-box" },
+      { yesId: "shapeCheck", noId: "No-shape", boxId: "shape-box" },
+      { yesId: "mendingCheck", noId: "No-mending", boxId: "mending-box" }
+  ];
+
+  function toggleHiddenBox(yesRadio, noRadio, hiddenBox) {
+      if (yesRadio.checked) {
+          hiddenBox.style.display = "grid";
+          console.log(hiddenBox.id + " is visible");
+      } else {
+          hiddenBox.style.display = "none";
+          console.log(hiddenBox.id + " is hidden");
+      }
   }
-}
+
+  sections.forEach(({ yesId, noId, boxId }) => {
+      const yesRadio = document.getElementById(yesId);
+      const noRadio = document.getElementById(noId);
+      const hiddenBox = document.getElementById(boxId);
+
+      if (yesRadio && noRadio && hiddenBox) {
+          yesRadio.addEventListener("change", () => toggleHiddenBox(yesRadio, noRadio, hiddenBox));
+          noRadio.addEventListener("change", () => toggleHiddenBox(yesRadio, noRadio, hiddenBox));
+
+          // Initialize visibility on page load
+          toggleHiddenBox(yesRadio, noRadio, hiddenBox);
+      }
+  });
+});
 
 
+<<<<<<< Updated upstream
 >>>>>>> 44deffd5f60c4a56c04ce8d357501fed3c6b5c69
+=======
+
+
+
+
+// price
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Base price
+    let basePrice = 100;
+
+    // Additional service prices
+    const PRICES = {
+        sizeChange: 30,
+        shapeChange: 30,
+        mending: 10,
+        ownFab: -5,
+    };
+
+    function updateTotal() {
+        let total = basePrice; // Start with the base price
+
+        // Check if each service is selected and add its price
+        if (document.getElementById("sizeCheck").checked) total += PRICES.sizeChange;
+        if (document.getElementById("shapeCheck").checked) total += PRICES.shapeChange;
+        if (document.getElementById("mendingCheck").checked) total += PRICES.mending;
+        if (document.getElementById("ownFab").checked) total += PRICES.ownFab;
+
+        // Update the price display
+        document.getElementById("total-price").textContent = total;
+    }
+
+    // Attach event listeners to checkboxes
+    document.getElementById("sizeCheck").addEventListener("change", updateTotal);
+    document.getElementById("shapeCheck").addEventListener("change", updateTotal);
+    document.getElementById("mendingCheck").addEventListener("change", updateTotal);
+    document.getElementById("ownFab").addEventListener("change", updateTotal);
+
+    // Set the initial price display
+    document.getElementById("total-price").textContent = basePrice;
+});
+
+>>>>>>> Stashed changes
