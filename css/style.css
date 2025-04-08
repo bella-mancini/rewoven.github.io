@@ -1,6 +1,7 @@
 body {
 	background-color: #FFF8EB;
 	margin: 0 16px;
+	
 }
 .body-grid{
 	align-self: center;
@@ -10,8 +11,7 @@ body {
 	grid-row: auto;
 	column-gap: 16px;
 	row-gap: 24px;
-	
-
+	margin-bottom: 72px;
 }
 
 header {
@@ -563,16 +563,21 @@ input::file-selector-button {
   }
   
   @media only screen and (min-width:700px) {
-	.body-grid{
+	body {
 		background-color: #FFF8EB;
+		margin: 0 16px;
+		
+	}
+	.body-grid{
+		align-self: center;
+		justify-self: center;
 		display: grid;
-		grid-template-columns: 1fr 1fr ;
+		grid-template-columns: 1fr 1fr;
 		grid-row: auto;
 		column-gap: 16px;
 		row-gap: 24px;
-		margin: 0 16px;
+		margin-bottom: 72px;
 		max-width: 800px;
-	
 	}
 	
 	header {
@@ -584,6 +589,7 @@ input::file-selector-button {
 		column-gap: 16px;
 		row-gap: 24px;
 		margin-top: 32px;
+		margin-bottom: 40px;
 	}
 	
 	h2{
@@ -601,30 +607,11 @@ input::file-selector-button {
 		width: calc(100% + 32px);
 	}
 	
-	h3{
-		text-align: center;
-		color: #3E7CA1;
-		font-size: 40px;
-		margin: 0;
-	}
-	
-	a {
-		font-family: Zain;
-		font-style:normal;
-	}
-	
 	img {
 		width:100%;
 	
 	}
 	
-	p {
-		color: #394C62;
-		font-family: Zain;
-		font-style:normal;
-		font-size: 24px;
-		margin: 0;
-	}
 	
 	
 	
@@ -632,6 +619,10 @@ input::file-selector-button {
 	grid-column: 1/3;
 	text-align: center;
 	
+	}
+
+	.left {
+		text-align: left;
 	}
 	
 	footer{
@@ -652,18 +643,8 @@ input::file-selector-button {
 		
 	}
 	
-
 	
-	footer a {
-		color: #FFF8EB;
-		font-size: 16px;
-	}
 	
-	.youtube-logo {
-		color: #FFF8EB;
-		width: 40px;
-		align-self: center;
-	}
 	
 	.icon-f1 {
 	grid-column:2;
@@ -685,57 +666,9 @@ input::file-selector-button {
 		grid-column: 2/3;
 	}
 	
+
 	
 	
-	  .button {
-		background-color: #C1CC89;
-		color: #394C62;
-		font-family: Zain;
-		font-style:normal;
-		font-size: 24px;
-		text-align: center;
-		border: none;
-			border-radius: 5px;
-			padding: 8px;
-	
-	  }
-	
-	 
-	  .nav-icon {
-		grid-column:2;
-		grid-row: 1;
-		font-size: 32px;
-		font-family: 'Material Symbols Outlined';
-		font-weight:bold;
-		font-style:normal;
-		color: #3E7CA1;
-	
-		display: flex;
-		justify-self: end;
-		column-gap: 16px;
-		
-		
-	  }
-	
-	  .home-icon {
-		grid-column:2;
-		grid-row: 1;
-		font-size: 32px;
-		font-family: 'Material Symbols Outlined';
-		font-weight:bold;
-		color: #3E7CA1;
-		display: flex;
-		justify-self: end;
-		column-gap: 16px;
-	  }
-	
-	  .home-icon, a {
-		text-decoration: none;
-	  }
-	
-	  .menu-icon {
-		cursor: pointer;
-	  }
 	
 	  .content {
 		padding: 18px;
@@ -748,19 +681,7 @@ input::file-selector-button {
 		border-radius: 15px;
 		text-align: center;
 	  }
-	  .content :hover {
-		font-size: 28px;
-	  }
-	
-	  .content a{
-		color: #FFF8EB;
-		border-radius: 16px;
-		margin-bottom: 16px;
-		font-size: 24px;
-		transform: translateY(2px); /* Slight shift for smooth animation */
-		transition: all .2s ease-in-out; /* Smooth transition */
-		
-	  }
+	 
 	
 	  .hero-img {
 		grid-column: 1/3;
@@ -798,53 +719,8 @@ input::file-selector-button {
 		text-align: left;
 		font-size: 16px;
 	  }
-	 
-	  .p-content a{
-		color: #FFF8EB;
-		border-radius: 16px;
-		margin-bottom: 16px;
-		font-size: 16px;
-		/*left: calc(10% + 50%);*/
-		justify-self: left;
-		transform: translateY(-10px); /* Slight shift for smooth animation */
-		transition: all .2s ease-in-out; /* Smooth transition */
-		
-	  }
 	
-	  .bigtext {
-		font-size: 160px;
-	  }
 	
-	.youtube {
-		width: 100%;
-		aspect-ratio: 16/9;
-		color: #FFF8EB;
-		align-items: center;
-		justify-items: end;
-	}
-	
-	.youtube img {
-		width: 40px;
-		height: 40px;
-		align-self:self-end;
-		justify-self: center;
-	}
-	
-	.secondary {
-		background-color:#3E7CA1;
-		color: #FFF8EB;
-	}
-	  .content-b {
-		margin-top: 8px;
-		  padding: 24px;
-		  
-		  flex-basis: 100%;
-		  justify-self: center;
-		  /*aspect-ratio: 1 / 1;*/
-		  resize:both;
-		  overflow:hidden;
-		  place-content: center;
-	  }
 	
 	/*Customer testimonials*/
 	.slideshow-container {
@@ -856,71 +732,6 @@ input::file-selector-button {
 		
 	  }
 	
-	  /* Next & previous buttons */
-	  .prev, .next {
-		cursor: pointer;
-		position: absolute;
-		top: 50%;
-		width: auto;
-		padding: 16px;
-		margin-top: -22px;
-		color: #3E7CA1;
-		font-weight: bold;
-		font-size: 24px;
-		transition: 0.8s ease;
-		border-radius: 0 3px 3px 0;
-		user-select: none;
-		transform: translateY(-50%);
-	  }
-	  /* Position the "next button" to the right */
-	  .next {
-		right: -50px;
-		border-radius: 3px 3px 3px 3px;
-	  }
-	  .prev {
-		  left: -50px; /* Adjust this value to control distance from the left edge */
-		  border-radius: 3px 3px 3px 3px;
-		}
-	  /* On hover, add a grey background color */
-	  .prev:hover, .next:hover {
-		background-color: #3E7CA1;
-		color: #FFF8EB;
-	  }
-	
-	  .mySlides1 img {
-		border-color: #3E7CA1;
-		border-width: 8px;
-		border-radius: 5px;
-		border-style: double;
-		width:95%;
-		
-	  }
-	
-	 .left {
-		text-align: left;
-	 } 
-	  /*Meet the team*/
-	.our-pictures {
-		border-radius: 5px;
-	}
-	.our-titles {
-		font-family: "Zain", serif;
-		font-weight: 300;
-		font-style: normal;
-		color: #3E7CA1;
-		font-size: 24px;
-		text-align: left;
-	}
-	
-	/* Our process*/
-	.carrot-icon {
-		font-size: 32px;
-		font-family: 'Material Symbols Outlined';
-		font-weight:bold;
-		font-style:normal;
-		color: #3E7CA1;
-		text-align: center;
-	}
 	
 	/*form*/
 	
@@ -932,10 +743,11 @@ input::file-selector-button {
 	
 	}
 	
-
-	
-	
-	
+	.check-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: end;
+	}
 	
 	
 
