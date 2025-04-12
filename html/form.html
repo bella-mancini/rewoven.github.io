@@ -22,6 +22,7 @@
     <a class="home-icon" href="../index.html">home</a>
         </div>
         <div class="content">
+			<a href="about.html">About</a><br>
             <a href="form.html">Order form</a></span></a><br>
             <a href="how-it-works.html">How it works</a><br>
             <a href="process.html">Jessica's process</a><br>
@@ -45,7 +46,7 @@ action="https://script.google.com/macros/s/AKfycbwA4FR5O7f_e72V5-3WGcuTK_BR3OtNo
 <input name="Name" type="text" placeholder="Name" class="two-column left" required><br>
 
 <label for="Email" class="col-1 zain-extrabold">Email</label>
-<input name="Email" type="text" placeholder="Email" class="two-column left" required><br>
+<input name="Email" type="email" placeholder="Email" class="two-column left" required><br>
 
 <!-- Size Change Section -->
 <label class="two-column left zain-extrabold">Size change <span class="zain-light">(+$30.00)</span></label>
@@ -144,17 +145,17 @@ action="https://script.google.com/macros/s/AKfycbwA4FR5O7f_e72V5-3WGcuTK_BR3OtNo
 <!-- Payment Info -->
 <h3 class="two-column">Payment information</h3>
 <label for="Card-number" class="col-1">Card number</label>
-<input name="Card Number" type="text" placeholder="XXXX XXXX XXXX XXXX" class="col-1" required><br>
+<input name="Card Number" type="number" placeholder="XXXX XXXX XXXX XXXX" class="col-1" required><br>
 
 <label for="Expiration-date" class="col-1">Expiration date</label>
 <input name="Expiration Month" type="text" placeholder="MM" class="col-1" required>
-<input name="Expiration Year" type="text" placeholder="YY" class="col-2" required><br>
+<input name="Expiration Year" type="number" placeholder="YY" class="col-2" required><br>
 
 <label for="Security-code" class="col-1">Security code</label>
-<input name="Security Code" type="text" placeholder="CSC" class="col-1" required><br>
+<input name="Security Code" type="number" placeholder="CSC" class="col-1" required><br>
 
 <label for="cardholder-name" class="col-1">Cardholder name</label>
-<input name="Cardholder Name" type="text" placeholder="Name" class="two-column left" required><br>
+<input name="Cardholder Name" type="number" placeholder="Name" class="two-column left" required><br>
 
 <br><p class="two-column">final price: $<span class="zain-extrabold" id="total-price">100</span></p><br>
 <button class="button two-column" type="submit">Submit</button>
