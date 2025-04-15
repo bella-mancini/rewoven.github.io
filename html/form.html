@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://use.typekit.net/apu5eah.css">
-	<title> My Form </title>
+	<title> Rewoven </title>
 </head>
 
 <body>
@@ -22,12 +22,12 @@
     <a class="home-icon" href="../index.html">home</a>
         </div>
         <div class="content">
-			<a href="about.html">About</a><br>
-            <a href="form.html">Order form</a></span></a><br>
-            <a href="how-it-works.html">How it works</a><br>
-            <a href="process.html">Jessica's process</a><br>
-            <a href="customert.html">Our happy customers</a><br>
-            <a href="FAQ.html">FAQ's</a><br>
+			<a href="about.html">About</a>
+            <a href="form.html">Order form</a>
+            <a href="how-it-works.html">How it works</a>
+            <a href="process.html">Jessica's process</a>
+            <a href="customert.html">Happy customers</a>
+            <a href="FAQ.html">FAQ's</a>
             </div>     
 			<h2>Order form</h2>
 </header>
@@ -39,7 +39,7 @@ action="https://script.google.com/macros/s/AKfycbwA4FR5O7f_e72V5-3WGcuTK_BR3OtNo
 
 <div class="two-column item-selection">
 	<p class="">pants</p>
-	<p>$180.00 USD</p>
+	<p>$150.00 USD</p>
 </div><br>
 <p class="two-column zain-light">(more options coming soom)</p>
 <label for="Name" class="col-1 zain-extrabold">First name</label>
@@ -49,7 +49,7 @@ action="https://script.google.com/macros/s/AKfycbwA4FR5O7f_e72V5-3WGcuTK_BR3OtNo
 <input name="Email" type="email" placeholder="Email" class="two-column left" required><br>
 
 <!-- Size Change Section -->
-<label class="two-column left zain-extrabold">Size change <span class="zain-light">(+$30.00)</span></label>
+<label class="two-column left zain-extrabold">Size change <span class="zain-light">(+$10.00)</span></label>
 <div class="radio-group two-column left">
     <input id="No-size" type="radio" name="Size Change" value="No">
     <label class="radio-label" for="size-no">No</label>
@@ -57,17 +57,35 @@ action="https://script.google.com/macros/s/AKfycbwA4FR5O7f_e72V5-3WGcuTK_BR3OtNo
     <input id="sizeCheck" type="radio" name="Size Change" value="Yes">
     <label class="radio-label" for="sizeCheck">Yes</label>
 
-    <div class="two-column hidden-box" id="size-box">
-        <label class="two-column">Waist measurement</label>
-        <label class="col-1 left radio-label">Initial <input name="Initial Waist Measurement" type="text" placeholder="inches"></label>
-        <label class="col-2 left radio-label">Desired <input name="Desired Waist Measurement" type="text" placeholder="inches"></label>
+<div class="two-column hidden-box" id="size-box">
+	<label class="two-column">Waist measurement</label>
+	<label class="col-1 left radio-label">Initial <input name="Initial Waist Measurement" type="text" placeholder="inches"></label>
+	<label class="col-2 left radio-label">Desired <input name="Desired Waist Measurement" type="text" placeholder="inches"></label>
+</div>
+</div>
+
+<br>
+
+<!-- Length Change Section -->
+<label class="two-column left zain-extrabold">Length change <span class="zain-light">(+$10.00)</span></label>
+<div class="radio-group two-column left">
+    <input id="No-length" type="radio" name="Length Change" value="No">
+    <label class="radio-label" for="No-length">No</label>
+
+    <input id="lengthCheck" type="radio" name="Length Change" value="Yes">
+    <label class="radio-label" for="lengthCheck">Yes</label>
+
+    <div class="two-column hidden-box" id="length-box">
+        <label class="two-column">Length measurement</label>
+        <label class="col-1 left radio-label">Initial <input name="Initial Length Measurement" type="number" placeholder="inches"></label>
+        <label class="col-2 left radio-label">Desired <input name="Desired Length Measurement" type="number" placeholder="inches"></label>
     </div>
 </div>
 
 <br>
 
 <!-- Shape Change Section -->
-<label for="shape-1-a" class="two-column left zain-extrabold">Shape change <span class="zain-light">(+$30.00)</span></label>
+<label for="shape-1-a" class="two-column left zain-extrabold">Shape change <span class="zain-light">(+$10.00)</span></label>
 <div class="radio-group two-column left">
 	<input id="No-shape" type="radio" name="Shape Change" value="No" class="col-1">
 	<label class="radio-label" for="No-shape">No</label>
@@ -157,9 +175,34 @@ action="https://script.google.com/macros/s/AKfycbwA4FR5O7f_e72V5-3WGcuTK_BR3OtNo
 <label for="cardholder-name" class="col-1">Cardholder name</label>
 <input name="Cardholder Name" type="number" placeholder="Name" class="two-column left" required><br>
 
-<br><p class="two-column">final price: $<span class="zain-extrabold" id="total-price">100</span></p><br>
+
+<img class="hero-img" src="../img/websiteBorders-03.png">
+
+<!-- Price Info -->
+<h3 class="two-column">Pricing Transparency</h3>
+<br class="two-column"> <br>
+<p class="radio-label col-1">Shipping to us</p>
+<p class="radio-label right">12.00</p>
+<p class="radio-label">Seamstress Pay ($20/hr)</p>
+<p class="radio-label right">40.00</p>
+<p class="radio-label">Shipping to us</p>
+<p class="radio-label right">12.00</p>
+<p class="radio-label">Packaging</p>
+<p class="radio-label right">2.00</p>
+<p class="radio-label">Markup (30%)</p>
+<p class="radio-label right">44.00</p>
+<hr class="two-column">
+<p class="radio-label">Base Price</p>
+<p class="radio-label  right">150.00</p>
+
+<p class="radio-label">Additional</p>
+<p class="radio-label  right"><span class="radio-label" id="additional-price">0</span></p>
+<hr class="two-column">
+<p class="col-1 left zain-extrabold">Final price</p>
+<p class="col-2 right zain-extrabold"><span class="zain-extrabold  right" id="total-price">150</span></p><br>
 <button class="button two-column" type="submit">Submit</button>
 </form>
+
 
 	
           
@@ -167,13 +210,17 @@ action="https://script.google.com/macros/s/AKfycbwA4FR5O7f_e72V5-3WGcuTK_BR3OtNo
 </div>     
 <footer>
     <img class="rewoven-logo" src="../img/logo-rewoven-white.png" >
-    <p class="youtube-logo">youtube:<a href="https://www.youtube.com/channel/UCqCOiJrG88Xx8-dNqdaxTTw"><img src="../img/youtube-logo.png" alt="youtube logo"></a></p>
-      
-            <a href="../index.html">Home</a>
-            <a href="../html/form.html" class="col-2">Commission form</a>
-            <a href="../html/process.html" >Our process</a>
-            <a href="../html/customert.html" class="col-2">Customer testimonials</a>
-            
+    <p class="socials-logo secondary">Follow our socials:<br>
+        <a href="https://www.youtube.com/channel/UCqCOiJrG88Xx8-dNqdaxTTw"><img src="../img/youtube-logo.png" alt="youtube logo"></a>
+        <a href="https://www.youtube.com/channel/UCqCOiJrG88Xx8-dNqdaxTTw"><img src="../img/rewovenInstagramLogo.png" alt="Instagram logo"></a>
+        <a href="https://www.youtube.com/channel/UCqCOiJrG88Xx8-dNqdaxTTw"><img src="../img/rewovenPinterestLogo.png" alt="Pinterest logo"></a>
+    </p>
+        <a class="col-1" href="about.html">About</a>
+        <a class="col-2"  href="form.html">Order form</a></span></a>
+        <a class="col-1" href="how-it-works.html">How it works</a>
+        <a class="col-2" href="process.html">Jessica's process</a>
+        <a class="col-1" href="customert.html">Our happy customers</a>
+        <a class="col-2" href="FAQ.html">FAQ's</a>
 </footer>
         
     

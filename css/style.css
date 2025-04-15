@@ -68,7 +68,9 @@ p {
 	margin: 0;
 }
 
-
+.right {
+	text-align: right;
+}
 
 .two-column {
 grid-column: 1/3;
@@ -83,6 +85,7 @@ footer{
 	grid-row: auto;
 	grid-column: 1/3;
 	grid-row: auto;
+
 	column-gap: 16px;
 	row-gap: 16px;
 	margin-top: 32px;
@@ -98,14 +101,10 @@ footer{
 
 footer a {
 	color: #FFF8EB;
-	font-size: 16px;
+	font-size: 24px;
 }
 
-.youtube-logo {
-	color: #FFF8EB;
-	width: 40px;
-	align-self: center;
-}
+
 
 
 .icon-f1 {
@@ -191,9 +190,11 @@ border: none;
     background-color: #3E7CA1;
 	color: #FFF8EB;
     grid-column: 1/3;
-    padding-bottom: 18px;
+	padding-left: 32px;
     border-radius: 15px;
 	text-align: left;
+	
+	grid-template-columns: 1fr 1fr;
   }
   .content :hover {
 	font-size: 28px;
@@ -202,14 +203,21 @@ border: none;
   .content a{
     color: #FFF8EB;
     border-radius: 16px;
-    margin-bottom: 16px;
 	font-size: 24px;
+	align-self: center;
     transform: translateY(2px); /* Slight shift for smooth animation */
     transition: all .2s ease-in-out; /* Smooth transition */
     
   }
 
   .hero-img {
+	grid-column: 1/3;
+	border-radius: 0px;
+	width: calc(100% + 32px);
+	margin-left: -16px;
+  }
+
+  .top-img {
 	grid-column: 1/3;
 	border-radius: 0px;
 	width: calc(100% + 32px);
@@ -270,11 +278,12 @@ border: none;
 	justify-items: end;
 }
 
-.youtube img {
-	width: 40px;
-	height: 40px;
+.socials-logo img {
+	width: 24px;
+	height: 24px;
 	align-self:self-end;
 	justify-self: center;
+	padding:4px;
 }
 
 .secondary {
@@ -493,6 +502,12 @@ input::file-selector-button {
 		padding: 8px;
 }
 
+hr {
+	width:100%;
+	height:1px;
+	background-color:#3E7CA1;
+}
+
 /* FAQ*/
 .plus-button {
 	font-family: 'Material Symbols Outlined';
@@ -511,10 +526,11 @@ summary {
 	grid-column: 1/3;
 	background-color: #3E7CA1;
 	list-style:none;
-	
+
 	border: none;
 		border-radius: 5px;
 		padding: 8px;
+    
 }
 
 details p {
@@ -576,11 +592,14 @@ details div{
 	margin-top: -8px;
   }
 
-  details {
-	max-width: 800px;
+details {
+	display: inline-block;
 	width: 100%;
-  }
-
+	break-inside: avoid; /* Keeps the details from splitting between columns */   
+}
+.full-width-section {
+	width: 100%;
+}
 
   /*Fonts*/
   .swear-display {
@@ -681,11 +700,6 @@ details div{
 		grid-template-columns: 1fr 1fr;
 		grid-row: auto;
 		grid-column: 1/3;
-		grid-row: auto;
-		column-gap: 16px;
-		row-gap: 24px;
-		margin-top: 32px;
-		margin-bottom: 40px;
 	}
 	
 	h2{
@@ -768,14 +782,7 @@ details div{
 	
 	  .content {
 		padding: 18px;
-		display: none;
-		overflow: hidden;
-		background-color: #3E7CA1;
-		color: #FFF8EB;
 		grid-column: 1/3;
-		padding-bottom: 18px;
-		border-radius: 15px;
-		text-align: center;
 	  }
 	 
 	

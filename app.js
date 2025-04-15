@@ -7,10 +7,10 @@ for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = document.querySelector('.content');
-    if (content.style.display === "block") {
+    if (content.style.display === "grid") {
       content.style.display = "none";
     } else {
-      content.style.display = "block";
+      content.style.display = "grid";
     }
   });
 }
@@ -73,7 +73,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = [
       { yesId: "sizeCheck", noId: "No-size", boxId: "size-box" },
       { yesId: "shapeCheck", noId: "No-shape", boxId: "shape-box" },
-      { yesId: "mendingCheck", noId: "No-mending", boxId: "mending-box" }
+      { yesId: "mendingCheck", noId: "No-mending", boxId: "mending-box" },
+      { yesId: "lengthCheck", noId: "No-length", boxId: "length-box" }
   ];
 
   function toggleHiddenBox(yesRadio, noRadio, hiddenBox) {
@@ -106,37 +107,43 @@ document.addEventListener("DOMContentLoaded", function () {
 // price
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Base price
-    let basePrice = 100;
+  // Base price
+  let basePrice = 150.00; // Set your actual base price here
 
-    // Additional service prices
-    const PRICES = {
-        sizeChange: 30,
-        shapeChange: 30,
-        mending: 10,
-        ownFab: -5,
-    };
+  // Additional service prices
+  const PRICES = {
+      sizeChange: 10,
+      shapeChange: 10,
+      mending: 10,
+      ownFab: -5,
+      lengthChange: 10,
+  };
 
-    function updateTotal() {
-        let total = basePrice; // Start with the base price
+  function updateTotal() {
+      let addPrice = 0;
 
-        // Check if each service is selected and add its price
-        if (document.getElementById("sizeCheck").checked) total += PRICES.sizeChange;
-        if (document.getElementById("shapeCheck").checked) total += PRICES.shapeChange;
-        if (document.getElementById("mendingCheck").checked) total += PRICES.mending;
-        if (document.getElementById("ownFab").checked) total += PRICES.ownFab;
+      // Check if each service is selected and add its price
+      if (document.getElementById("sizeCheck").checked) addPrice += PRICES.sizeChange;
+      if (document.getElementById("shapeCheck").checked) addPrice += PRICES.shapeChange;
+      if (document.getElementById("mendingCheck").checked) addPrice += PRICES.mending;
+      if (document.getElementById("ownFab").checked) addPrice += PRICES.ownFab;
+      if (document.getElementById("lengthCheck").checked) addPrice += PRICES.lengthChange;
 
-        // Update the price display
-        document.getElementById("total-price").textContent = total;
-    }
+      let total = basePrice + addPrice;
 
-    // Attach event listeners to checkboxes
-    document.getElementById("sizeCheck").addEventListener("change", updateTotal);
-    document.getElementById("shapeCheck").addEventListener("change", updateTotal);
-    document.getElementById("mendingCheck").addEventListener("change", updateTotal);
-    document.getElementById("ownFab").addEventListener("change", updateTotal);
+      // Update the price displays
+      document.getElementById("additional-price").textContent = addPrice.toFixed(2);
+      document.getElementById("total-price").textContent = total.toFixed(2);
+  }
 
-    // Set the initial price display
-    document.getElementById("total-price").textContent = basePrice;
+  // Attach listeners to all radio buttons that affect price
+    ["sizeCheck", "shapeCheck", "mendingCheck", "ownFab", "lengthCheck"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener("change", updateTotal);
+    });
+
+  // Initial update
+  updateTotal();
 });
+
 
