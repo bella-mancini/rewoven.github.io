@@ -85,7 +85,7 @@
             return;
         }
 
-        let apiUrl = "https://script.google.com/macros/s/AKfycbwA4FR5O7f_e72V5-3WGcuTK_BR3OtNoG4y5ih3C126ruhHhWmhHIahrZKXOWBa_VCB/exec?id=" + searchId;
+        let apiUrl = "https://script.google.com/macros/s/AKfycbynEm5l54q90rKbU3dC_PC0ySdTA22L_8BsuOCvRxscLnu16x5fTgdF5LO7Fc58MTM9/exec?id=" + searchId;
 
         fetch(apiUrl)
     .then(response => response.json())
@@ -102,7 +102,7 @@
                 waterSink: data.waterSink,
                 co2Kg: data.co2Kg,
                 co2Drive: data.co2Drive,
-                reused: data.reused
+                Reused: data.Reused
             });
 
             localStorage.setItem("searchedName", data.Name || "");
@@ -110,7 +110,7 @@
             localStorage.setItem("waterSink", data.waterSink || "Not available");
             localStorage.setItem("co2Kg", data.co2Kg || "Not available");
             localStorage.setItem("co2Drive", data.co2Drive || "Not available");
-            localStorage.setItem("reused", data.reused || "Not available");
+            localStorage.setItem("Reused", data.Reused || "Not available");
 
             console.log("Stored in localStorage:", localStorage); // Debugging log
 

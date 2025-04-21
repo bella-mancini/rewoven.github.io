@@ -61,16 +61,16 @@
 <script>
     window.onload = function () {
         // Retrieve the "Reused" data from localStorage
-        let reused = localStorage.getItem("Reused");
+        let Reused = localStorage.getItem("Reused");
 
-        console.log("Retrieved Reused data:", reused); // Debugging log
+        console.log("Retrieved Reused data:", Reused); // Debugging log
 
         // Display the retrieved name
-        if (reused) {
-            document.getElementById("reused-display").innerText = reused;
+        if (Reused) {
+            document.getElementById("Reused-display").innerText = Reused;
         } 
         else {
-            document.getElementById("reused-display").innerText = "No name found.";
+            document.getElementById("Reused-display").innerText = "No name found.";
         }
     };
 </script>
