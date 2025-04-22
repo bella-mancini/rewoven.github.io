@@ -610,7 +610,8 @@ details {
 	break-inside: avoid; /* Keeps the details from splitting between columns */   
 }
 .full-width-section {
-	width: 100%;
+	width: calc(100% - 32px)
+	
 }
 
 /* NFC */
