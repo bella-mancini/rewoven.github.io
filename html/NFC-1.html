@@ -31,12 +31,21 @@
             <a href="customert.html">Happy customers</a>
             <a href="FAQ.html">FAQ's</a>
              </div>     
-<h2 id="name-display">Welcome name!</h2>
+<h2 id="name-display">Your Rewoven Metrics</h2>
 </header>
 <div class="body-grid">
-   <img class="fullscreen hero-img" src="../img/placholderImage177x100.jpg">
- <p class="two-column">Watch your jeans transform infront of you</p>
-<a href="NFC-2.html" class="two-column button">Next</a>
+<p class="two-column">When you decided to use rewoven's services instead of buying a 
+    new pair of jeans you save...
+ </p>
+<p class="two-column bigtext" id="waterGal-display">number</p>
+<p class="two-column">gallons of water</p>
+<br><br><br><br><br>
+<details class="two-column left">
+    <summary class="two-column">Click to see a real world  example</summary>
+    <div class="two-column left"> <p>It's like turning your sink on and letting it run for <span id="waterSink-display">number</span> hours.</p></div>
+  </details>
+
+ <a href="NFC-2.html" class="two-column button">Next</a>
     
 </div>
 <!--<script src="../app.js"></script>  -->
@@ -69,7 +78,7 @@
     let Reused = localStorage.getItem("Reused");
     
     if (document.getElementById("name-display")) {
-        document.getElementById("name-display").innerText = storedName ? "Welcome, " + storedName + "!" : "No name found.";
+        document.getElementById("name-display").innerText = storedName ? storedName + " Rewoven metrics" : "No name found.";
     }
 
     if (document.getElementById("waterGal-display")) {

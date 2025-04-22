@@ -31,37 +31,33 @@
             <a href="customert.html">Happy customers</a>
             <a href="FAQ.html">FAQ's</a>
             </div>     
-<h2>Reduce</h2>
+<h2 id="name-display">Your Rewoven Metrics</h2>
 </header>
 <div class="body-grid">
  
- <p class="two-column">When you decided to use rewoven's services instead of buying a 
-    new pair of jeans you saved...
- </p>
- <p class="two-column"><span id="waterGal-display">number</span> gallons of water</p>
- 
- <details class="two-column left">
-    <summary><span class="plus-button">add</span> What's this compared to?</summary>
-    <div class="two-column left"> <p class="p-content two-column">It's like turning your sink on and letting it run for <span  class="cream-text" id="waterSink-display">number</span> hours.</p>
-    </div>
-  </details>
 
   
- <p class="two-column"><span id="co2Kg-display">number</span> kg of CO2</p>
- <!--<button class="collapsible">What's this compared to?
- <p class="p-content two-column">It's like turning your sink on and letting it run for <span  class="cream-text" id="waterSink-display">number</span> hours.</p></button>
- -->
+ <!--<p class="two-column "><span id="co2Kg-display">number</span> kg of CO2</p>
  <details class="two-column left">
-    <summary><span class="plus-button">add</span> What's this compared to?</summary>
-    <div class="two-column left"> <p class="p-content two-column">It's like turning your sink on and letting it run for <span  class="cream-text" id="waterSink-display">number</span> hours.</p>
-    </div>
+    <summary class="two-column">Click to see a real world  example</summary>
+    <div class="two-column left"> <p>It's like driving <span id="co2Drive-display">number</span>  miles in the average gas car.</p></div>
+  </details>-->
+
+
+
+<p class="two-column">When you decided to use rewoven's services instead of buying a 
+    new pair of jeans you save...
+ </p>
+<p class="two-column bigtext" id="co2Kg-display">number</p>
+<p class="two-column">Kg of CO2</p><br><br><br>
+<details class="two-column left">
+    <summary class="two-column">Click to see a real world  example</summary>
+    <div class="two-column left"> <p>It's like driving <span id="co2Drive-display">number</span>  miles in the average gas car.</p></div>
   </details>
- <!--<button class="collapsible">What's this compared to?
-    <p class="p-content two-column">It's like driving <span  class="cream-text" id="co2Drive-display">number</span> miles in the average gas car.</p></button>-->
 
- <a href="NFC-3.html" class="two-column button ">Next</a>
-</div>   
-
+ <a href="NFC-3.html" class="two-column button">Next</a>
+    
+</div>
 
 <footer>
     <img class="rewoven-logo" src="../img/logo-rewoven-white.png" >
@@ -90,7 +86,7 @@
     let Reused = localStorage.getItem("Reused");
     
     if (document.getElementById("name-display")) {
-        document.getElementById("name-display").innerText = storedName ? "Welcome, " + storedName + "!" : "No name found.";
+        document.getElementById("name-display").innerText = storedName ? storedName + " Rewoven metrics" : "No name found.";
     }
 
     if (document.getElementById("waterGal-display")) {
